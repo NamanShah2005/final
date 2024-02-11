@@ -1,5 +1,5 @@
 import './Navbar.scss';
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const links = [
 	{name: "Home", path: "/", icon: "bi bi-house-fill"},
@@ -29,7 +29,9 @@ const Navbar = () => {
 					}
 				</div>
 				<div id={"nav-account"}>
-				<img src={"/snap.jpeg"} alt={"Account"} />
+					<Link to="/login">
+						<img src={"/snap.jpeg"} alt={"Account"} />
+					</Link>
 				</div>
 			</div>
 		</>

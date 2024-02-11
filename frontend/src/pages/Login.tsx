@@ -1,6 +1,11 @@
+import { Link } from 'react-router-dom';
 import './Login.scss';
+import { useState } from 'react';
 
 const Login = () => {
+	const [username, setUsername] = useState('');
+	const [pass, setPass] = useState('');
+
 	return (
 		<>
 			<div id={"login-page"}>
@@ -21,7 +26,9 @@ const Login = () => {
 						</form>
 					</div>
 					<div id={"close-button"}>
-						<i className={"bi bi-x"}></i>
+						<Link to="/">
+							<i className={"bi bi-x"}></i>
+						</Link>
 					</div>
 				</div>
 			</div>
