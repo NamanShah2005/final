@@ -841,7 +841,7 @@ const MakeReq = () => {
                     </div>
                     <div id={"summary-section"}>
                         <div id={"sum-price"}>Total Price: <span>₹{totalPrice}</span></div>
-                        <div id={"req-date"}>Date: <span>{currentDate.toLocaleString()}</span></div>
+                        <div id={"req-date"}>Date: <span>{currentDate.toDateString()}</span></div>
                     </div>
                     <input type={"submit"} value={"Submit"} />
                 </form>

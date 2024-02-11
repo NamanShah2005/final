@@ -24,19 +24,45 @@
     }
   }
 
-  #approval-config {
-    text-align: center;
-    font-weight: 500;
-    color: var(--grey-5);
-    margin-bottom: 30px;
+  #approval-club-select {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
 
-    #config-club {
-      color: var(--grey-8);
-      font-weight: 700;
+    #approval-config {
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: 500;
+      color: var(--grey-5);
+
+      span {
+        color: #202424;
+        font-weight: 700;
+      }
     }
 
-    #config-change {
-      color: var(--blue-2);
+    #approval-dropdown {
+      #config-change {
+        width: 100%;
+        background: var(--grey-1);
+        border: 2px solid var(--blue-4);
+        border-radius: 5px;
+        outline: none;
+        padding: 7px 15px;
+        font-size: 1em;
+        font-family: var(--text-font);
+        font-weight: 500;
+        color: var(--grey-9);
+        transition: 0.2s ease-in-out;
+
+        &:focus {
+          transform: scale(1.01);
+          box-shadow: 0 0 10px #00000011;
+          background: var(--grey-0);
+        }
+      }
     }
   }
 

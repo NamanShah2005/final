@@ -61,7 +61,17 @@ const Request = () => {
 		<>
 			<div id="approval-page">
 				<div id={"approval-title"}>Approval Status</div>
-				<div id={"approval-config"}>Viewing for <span id={"config-club"}>{currClub}</span> (<span id={"config-change"}>Change</span>)</div>
+				<div id="approval-club-select">
+					<div id={"approval-config"}>Viewing for <span id={"config-club"}>{currClub}</span> </div>
+					<div id="approval-dropdown">
+						<select id="config-change">
+							<option value="Change">Change</option>
+							<option value="Cha4nge">Change</option>
+							<option value="Chan23ge">Change</option>
+							<option value="Chan2ge">Change</option>
+						</select>
+					</div>
+				</div>
 				<div id={"status-container"}>
 					<table id={"status-table"}>
 						<thead>

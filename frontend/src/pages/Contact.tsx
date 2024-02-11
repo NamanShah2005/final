@@ -2,10 +2,11 @@ import './Contact.scss';
 import naman from "../assets/naman.png"
 import james from "../assets/james.png"
 import darshil from "../assets/Darshil.png"
-// import shubham from "../assets/shubham.png"
+import shubham from "../assets/Shubham.png"
+
 const contacts = [
 	{
-		img: "/mandi.jpg",
+		img: shubham,
 		name: "Shubham Padhi",
 		roll: "B23295",
 		email: "b232195@students.iitmandi.ac.in",
