@@ -120,11 +120,15 @@ const Login = () => {
                             <input id="email" type={"text"} placeholder={"Email"} required value={Email} onChange={(e) => { setEmail(e.target.value) }} />
                             <label htmlFor="password" id="email">Password </label>
                             <input id="password" type={"password"} placeholder={"Password"} required value={Password} onChange={(e) => { setPassword(e.target.value) }} />
-							<div className='registry'>
-								<Link className="reg1" to={"/register"}>Register</Link>
-							</div>
-                            <div id={"login-button"}>
-                                <button type={"submit"}>Login</button>
+							<div id="buttons">
+                                <div id='register-button'>
+                                    <button>
+                                    <Link to={"/register"}>Register</Link>
+                                    </button>
+                                </div>
+                                <div id={"login-button"}>
+                                    <button type={"submit"}>Login</button>
+                                </div>
                             </div>
                         </form>
                     </div>
