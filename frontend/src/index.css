@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "HK Grotesk";
+  src: url("./fonts/HankenGrotesk.ttf");
+}
+@font-face {
+  font-family: "Pier";
+  src: url("./fonts/PierSans.otf");
+}
+:root {
+  --title-font: "Pier", sans-serif;
+  --text-font: "HK Grotesk", sans-serif;
+  --blue-0: #192B68;
+  --blue-1: #243D91;
+  --blue-2: #5E7CE9;
+  --blue-3: #8198EE;
+  --blue-4: #C7D0F8;
+  --grey-0: #f9fafb;
+  --grey-1: #f4f6f8;
+  --grey-2: #dfe3e8;
+  --grey-3: #c4cdd5;
+  --grey-4: #919eab;
+  --grey-5: #637381;
+  --grey-6: #454f5b;
+  --grey-7: #212b36;
+  --grey-8: #161c24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--text-font);
+  font-size: 16px;
+  font-weight: 400;
+  background: linear-gradient(240deg, var(--grey-0) 80%, var(--blue-4)) fixed;
+  color: var(--grey-8);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--grey-0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grey-6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--grey-7);
+}
+
+::-moz-selection {
+  background: var(--blue-2);
+  color: var(--grey-0);
+}
+
+::selection {
+  background: var(--blue-2);
+  color: var(--grey-0);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=index.css.map */

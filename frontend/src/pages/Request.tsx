@@ -17,6 +17,8 @@ interface rew {
 	Club : string;
 }
 
+
+
 const Request = () => {
 	
 	
@@ -25,6 +27,12 @@ const Request = () => {
     const [loading, setLoading] = useState(true);
     const [Society, setSociety] = useState("All");
     const [currClub, setcurrClub] = useState("ECell");
+
+	// console.log(currClub)
+
+	useEffect(() => {
+		console.log(currClub);
+	})
 
     useEffect(() => {
         const fetchData = async () => {
@@ -64,11 +72,12 @@ const Request = () => {
 				<div id="approval-club-select">
 					<div id={"approval-config"}>Viewing for <span id={"config-club"}>{currClub}</span> </div>
 					<div id="approval-dropdown">
-						<select id="config-change">
-							<option value="Change">Change</option>
-							<option value="Cha4nge">Change</option>
-							<option value="Chan23ge">Change</option>
-							<option value="Chan2ge">Change</option>
+						<select id="config-change" value = {currClub} onChange={(e) => {setcurrClub(e.target.value)}}>
+							{items.map((item, index) => {
+								return(
+									<option value={item.Name}>{item.Name}</option>
+								)
+							})}
 						</select>
 					</div>
 				</div>

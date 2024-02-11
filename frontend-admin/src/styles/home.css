@@ -1,0 +1,216 @@
+.home {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.her {
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btn1 {
+  text-decoration: none;
+  margin: 15px 0px;
+  margin-top: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(215, 215, 215, 0.5);
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.homeh3 {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  margin-left: 20px;
+}
+
+.btn2 {
+  text-decoration: none;
+  margin: 15px 0px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(223, 222, 222, 0.5);
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.imgsrc {
+  height: 30px;
+  width: 30px;
+}
+
+.his {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(223, 222, 222, 0.4);
+}
+
+.mainbox {
+  margin-left: 30px;
+  width: 90%;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mbh1 {
+  margin-top: 30px;
+}
+
+.fortable {
+  width: 98%;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  position: relative;
+}
+
+.table {
+  width: 90%;
+  margin-top: 25px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.th {
+  padding: 20px 15px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product {
+  height: 140px;
+  width: 140px;
+}
+
+.sort {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sort1 {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.remo {
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: black;
+  color: #f0f0f0;
+}
+.remo:hover {
+  color: black;
+  background-color: rgba(215, 215, 215, 0.5);
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #f0f0f0;
+}
+thead tr {
+  border-bottom: 2px solid black;
+}
+
+.trs {
+  padding: 20px 0px;
+  margin: 0px 20px;
+  border-top: 2px solid black;
+}
+
+.tbody {
+  padding: 20px 0px;
+  margin: 0px 20px;
+}
+
+.td {
+  padding: 20px 0px;
+  margin: 0px 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1050px) {
+  .btn1 {
+    width: 80%;
+  }
+  .btn2 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 930px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+  .her {
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn1 {
+    width: 300px;
+    height: 80px;
+  }
+  .btn2 {
+    width: 300px;
+    height: 80px;
+  }
+  .his {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .mainbox {
+    margin: 0px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 330px) {
+  .btn1 {
+    width: 200px;
+  }
+  .btn2 {
+    width: 200px;
+  }
+  .mbh1 {
+    font-size: 1.5rem;
+  }
+  .table {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-height: 600px) {
+  .home {
+    height: 600px;
+  }
+}/*# sourceMappingURL=home.css.map */

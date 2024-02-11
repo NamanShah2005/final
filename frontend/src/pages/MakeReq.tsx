@@ -703,9 +703,15 @@ import './MakeReq.scss';
 import { useState, useEffect } from "react";
 import axios from 'axios';
 
+interface Item {
+	id: number;
+	Name: string;
+    Club: string
+}
+
 const MakeReq = () => {
     const [commonData, setCommonData] = useState({
-        Club: "Music",
+        Club: "",
         Name_Of_Supplier: "",
         Description_of_item: ""
     });
@@ -731,8 +737,16 @@ const MakeReq = () => {
     }
 
     const deleteRow = (index: number) => {
-        setData(data.filter((_, i) => i !== index));
-    }
+        // Remove the item at the specified index
+        const newData = [...data];
+        newData.splice(index, 1);
+        // Update the sno for each item in the new data array
+        newData.forEach((item, idx) => {
+            item.sno = idx + 1; // Update the sno to be the new index plus 1
+        });
+        // Update the data state with the new data array
+        setData(newData);
+    };
 
     const SubmitHandler = async (event) => {
         event.preventDefault();
@@ -743,17 +757,20 @@ const MakeReq = () => {
                     ...commonData, // Add common data to each request
                     Item_Name: item.item,
                     Qty: item.quantity,
-                    Amount: item.price
+                    Amount: item.price,
+                    Club: currClub
                 }, {
                     headers: {
                         'Content-Type': 'application/json'
                     }
                 });
 
-                if (data.success && !toastDisplayed) {
+                console.log(data);
+
+                if (data.success) {
                     toast.success(data.message);
                     setToastDisplayed(true); // Set toastDisplayed to true after displaying the toast
-                } else if (!toastDisplayed) {
+                } else {
                     toast.error(data.message);
                     setToastDisplayed(true); // Set toastDisplayed to true after displaying the toast
                 }
@@ -771,6 +788,28 @@ const MakeReq = () => {
         });
         return total;
     };
+
+
+
+    const [items, setItems] = useState<Item[]>([]);
+    // const [reqs, setreqs] = useState<rew[]>([]);
+    const [loading, setLoading] = useState(true);
+    // const [Society, setSociety] = useState("All");
+    const [currClub, setcurrClub] = useState("ECell");
+
+useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('http://localhost:3005/club/all');
+            setItems(response.data.clubs);
+            console.log(response.data.clubs);
+            setLoading(false);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+    fetchData();
+}, []);
 
     useEffect(() => {
         // Update total price whenever data changes
@@ -796,14 +835,14 @@ const MakeReq = () => {
                     </div>
                     <div id="club-section">
                         <label htmlFor={"input-club"}>Club </label>
-                        <input id={"input-club"} list={"clubs-list"} placeholder={"Enter club..."} required />
-                        <datalist id={"clubs-list"}>
-                            <option value={"Club 1"} />
-                            <option value={"Club 2"} />
-                            <option value={"Club 3"} />
-                            <option value={"Club 4"} />
-                            <option value={"Club 5"} />
-                        </datalist>
+                        {/* <input id={"input-club"} list={"clubs-list"} placeholder={"Enter club..."} required /> */}
+                        <select id={"clubs-list"} value = {currClub} onChange={(e) => {setcurrClub(e.target.value)}}>
+                            {items.map((item, index) => {
+                                return(
+                                    <option value={item.Name}>{item.Name}</option>
+                                )
+                            })}
+                        </select>
                     </div>
                     <div id={"items-section"}>
                         <table id={"items-table"}>

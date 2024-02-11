@@ -66,7 +66,7 @@
       width: calc(50% - 10px);
       margin: 5px 5px 20px;
 
-      #input-club {
+      #clubs-list {
         width: 100%;
         background: var(--grey-1);
         border: 2px solid var(--blue-4);
@@ -78,7 +78,7 @@
         font-weight: 500;
         color: var(--grey-9);
         transition: 0.2s ease-in-out;
-
+  
         &:focus {
           transform: scale(1.01);
           box-shadow: 0 0 10px #00000011;

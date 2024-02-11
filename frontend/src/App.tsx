@@ -13,6 +13,7 @@ import Request from "./pages/Request.tsx";
 import ClubPage from "./pages/ClubPage.tsx";
 import data from '../public/data/clubs.json';
 import { Toaster } from 'react-hot-toast';
+import Register from './pages/Register.tsx';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/reqstatus" element={<Request />}/>
           <Route path="/login" element={<Login />}/>
+          <Route path="/register" element={<Register />}/>
           <Route path="*" element={<NotFound />}/>
         </Routes>
         <Toaster />

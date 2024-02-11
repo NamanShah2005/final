@@ -1,0 +1,93 @@
+#clubs-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 50px 20px;
+  animation: fade-in 0.2s;
+}
+#clubs-page #clubs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#clubs-page #clubs-heading {
+  font-family: var(--title-font);
+  font-size: 2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: var(--blue-0);
+  margin-bottom: 20px;
+  text-align: center;
+}
+#clubs-page #clubs-heading:after {
+  content: "";
+  width: 20ch;
+  display: block;
+  height: 3px;
+  background: var(--blue-1);
+  margin: 2px auto;
+}
+#clubs-page #heading-desc {
+  font-family: var(--text-font);
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--grey-5);
+  margin-bottom: 50px;
+  text-align: center;
+}
+#clubs-page #clubs-container {
+  width: min(1000px, 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#clubs-page #clubs-container .club-card {
+  width: min(300px, 100%);
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, var(--grey-4) 0%, var(--grey-5) 50%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4666666667);
+  color: var(--grey-0);
+  transition: 0.2s;
+}
+#clubs-page #clubs-container .club-card .club-img {
+  width: 100%;
+  aspect-ratio: 1;
+  background: red;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+#clubs-page #clubs-container .club-card .club-name {
+  font-family: var(--text-font);
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--blue-0);
+  margin-bottom: 10px;
+}
+#clubs-page #clubs-container .club-card .club-name a {
+  color: var(--blue-4);
+  text-decoration: none;
+  transition: 0.2s;
+}
+#clubs-page #clubs-container .club-card .club-name a:after {
+  content: "";
+  display: block;
+  width: 5ch;
+  height: 2px;
+  background: var(--blue-4);
+  margin: 0 auto;
+  transition: 0.2s;
+}
+#clubs-page #clubs-container .club-card:hover {
+  transform: scale(1.05);
+}
+#clubs-page #clubs-container .club-card:hover .club-name a:after {
+  width: 100%;
+}/*# sourceMappingURL=Clubs.css.map */

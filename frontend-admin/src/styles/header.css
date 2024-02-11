@@ -1,0 +1,133 @@
+.navcont {
+  height: 60px;
+  width: 100%;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: row;
+}
+
+.navcont2 {
+  height: 60px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navcont3 {
+  width: 20%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  margin-left: 30px;
+}
+
+.arrdown {
+  margin-right: 30px;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.founder {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3333333333);
+}
+
+.founderdetails {
+  position: fixed;
+  top: 10vh;
+  right: 0px;
+  height: 300px;
+  width: 300px;
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+.thiscont {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  margin: 20px 0px;
+}
+
+.age {
+  font-size: 1.1rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  margin: 20px 0px;
+}
+
+.ids {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.asa {
+  text-decoration: none;
+  color: black;
+  margin: 20px 0px;
+  font-size: 1.1rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+
+.headsh1 {
+  margin-left: 20px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: #192B68;
+}
+
+.headsh5 {
+  margin-left: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #192B68;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 400px) {
+  .navcont {
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navcont2 {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .navcont3 {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  .headsh1 {
+    font-size: 1.4rem;
+  }
+  .headsh5 {
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,92 @@
+#approval-page {
+  width: min(1000px, 100%);
+  margin: 50px auto;
+}
+#approval-page #approval-title {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: var(--title-font);
+  color: var(--blue-0);
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin: 20px auto 10px;
+  text-align: center;
+}
+#approval-page #approval-title:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--blue-0);
+  margin: 2px auto;
+  transition: 0.2s;
+}
+#approval-page #approval-club-select {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+#approval-page #approval-club-select #approval-config {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--grey-5);
+}
+#approval-page #approval-club-select #approval-config span {
+  color: #202424;
+  font-weight: 700;
+}
+#approval-page #approval-club-select #approval-dropdown #config-change {
+  width: 100%;
+  background: var(--grey-1);
+  border: 2px solid var(--blue-4);
+  border-radius: 5px;
+  outline: none;
+  padding: 7px 15px;
+  font-size: 1em;
+  font-family: var(--text-font);
+  font-weight: 500;
+  color: var(--grey-9);
+  transition: 0.2s ease-in-out;
+}
+#approval-page #approval-club-select #approval-dropdown #config-change:focus {
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.0666666667);
+  background: var(--grey-0);
+}
+#approval-page #status-container {
+  width: 100%;
+}
+#approval-page #status-container #status-table {
+  width: min(1000px, 100%);
+  text-align: left;
+  padding: 10px;
+}
+#approval-page #status-container #status-table th {
+  font-weight: 600;
+  color: var(--blue-0);
+  font-size: 1.2em;
+  border-bottom: 2px solid;
+}
+#approval-page #status-container #status-table td {
+  padding: 10px;
+}
+#approval-page #status-container #status-table th:nth-child(1), #approval-page #status-container #status-table td:nth-child(1) {
+  width: 70px;
+}
+#approval-page #status-container #status-table th:nth-child(2), #approval-page #status-container #status-table td:nth-child(2) {
+  width: 400px;
+}
+#approval-page #status-container #status-table tr:nth-child(even) {
+  background: var(--grey-2);
+}
+#approval-page #status-container #status-table th:nth-child(3), #approval-page #status-container #status-table td:nth-child(3) {
+  width: 70px;
+}
+#approval-page #status-container #status-table th:nth-child(4), #approval-page #status-container #status-table td:nth-child(4) {
+  width: 70px;
+}/*# sourceMappingURL=Request.css.map */
