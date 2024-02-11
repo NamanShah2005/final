@@ -67,16 +67,43 @@ import './Login.scss';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+// import { log } from 'console';
+
+interface userdetail {
+    id: number;
+    Name: string;
+    Club: string;
+    Email: String;
+    Password: String;
+    Designation: String;
+    Admin: String;
+}
+
+export const loggedIn = false;
 
 const Login = () => {
+    const [user1, setuser1] = useState<userdetail[]>([]);
     const [Email, setEmail] = useState('');
     const [Password, setPassword] = useState('');
     const navigate = useNavigate(); // React Router's useNavigate hook
-
+    const [login, setLogin] = useState(false);
+    
 	useEffect(() => {
 		console.log(Email)
 		console.log(Password)
 	})
+
+    const logouthandler = (e) => {
+        e.preventDefault();
+        try {
+            toast.success("logged out successfully");
+            setLogin(false)
+                // Redirect to the home page
+            navigate("/");
+        } catch (error) {
+            
+        }
+    }
 
     const SubmitHandler = async (e) => {
         e.preventDefault(); // Prevent default form submission
@@ -91,9 +118,14 @@ const Login = () => {
                 }
             });
 			// toast.success(data.message);
+            console.log(data);
+            setuser1(data.user)
+
+
 
             if (data.success) {
                 toast.success(data.message);
+                setLogin(true)
                 // Redirect to the home page
                 navigate("/");
             } else {
@@ -106,6 +138,11 @@ const Login = () => {
         }
     };
 
+
+    useEffect(() => {
+        console.log(login)
+    })
+
     return (
         <>
             <div id={"login-page"}>
@@ -114,7 +151,12 @@ const Login = () => {
                         <img src={"/logo.jpg"} alt={"Logo"} />
                         <div id={"login-title"}>Login to Student Gymkhana</div>
                     </div>
-                    <div id={"login-body"}>
+
+                    {login ? ( <div id={"login-button"}>
+                                    <button type={"submit"} onClick={logouthandler}>Logout</button>
+                                </div>)
+                                 :
+                        (<div id={"login-body"}>
                         <form id={"login-form"} onSubmit={SubmitHandler}>
                             <label htmlFor="email" id="email">Email </label>
                             <input id="email" type={"text"} placeholder={"Email"} required value={Email} onChange={(e) => { setEmail(e.target.value) }} />
@@ -131,7 +173,8 @@ const Login = () => {
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div>) }
+                    
                     <div id={"close-button"}>
                         <Link to="/">
                             <i className={"bi bi-x"}></i>

@@ -1,5 +1,8 @@
 import './Navbar.scss';
 import {Link, NavLink} from "react-router-dom";
+import { GrUserAdmin } from "react-icons/gr";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const links = [
 	{name: "Home", path: "/", icon: "bi bi-house-fill"},
@@ -8,6 +11,26 @@ const links = [
 	{name: "Check Status", path: "/reqstatus", icon: "bi bi-question-circle-fill"},
   {name: "Contact", path: "/contact", icon: "bi bi-telephone-fill"},
 ]
+
+// useEffect(() => {
+	
+// 	const [items, setItems] = useState([]);
+//     const [loading, setLoading] = useState(true);
+
+
+// 	const fetchData = async () => {
+// 		try {
+// 			const response = await axios.get('http://localhost:3005/user/detail');
+// 			setItems(response.data.clubs);
+// 			console.log(response.data.clubs);
+// 			setLoading(false);
+// 		} catch (error) {
+// 			console.error('Error fetching data:', error);
+// 		}
+// 	};
+
+// 	fetchData();
+// }, []);
 
 
 const Navbar = () => {
@@ -27,6 +50,7 @@ const Navbar = () => {
               )
             })
 					}
+					<a href="http://localhost:3001"><GrUserAdmin /></a>
 				</div>
 				<div id={"nav-account"}>
 					<Link to="/login">
