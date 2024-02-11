@@ -1,0 +1,142 @@
+footer {
+  margin-top: 100px;
+  width: calc(100vw - 125px);
+  background: linear-gradient(#202424aa, #202424aa), linear-gradient(120deg, #192B68aa, #5E7CE9aa) , url('../assets/mandi.jpg') center;
+  background-size: cover;
+  position: relative;
+  color: var(--grey-0);
+  border-radius: 10px;
+  box-shadow: 0 0 30px #00000055;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 50px;
+  background-attachment: fixed;
+}
+
+#footer-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+#footer-left {
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: 1rem;
+  width: 500px;
+  align-self: flex-start;
+}
+
+#footer-logo {
+  width: 70px;
+  vertical-align: middle;
+}
+
+#footer-title {
+  font-size: 2em;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+#footer-address {
+  margin-top: 10px;
+  margin-left: 10px;
+  color: var(--grey-4);
+  font-weight: 700;
+  width: 100%;
+
+  a {
+    color: var(--blue-4);
+    text-decoration: none;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 5ch;
+      height: 2px;
+      background: var(--blue-4);
+      margin: 0 0;
+      transition: 0.2s;
+    }
+
+    &:hover:after {
+      width: 10ch;
+    }
+  }
+}
+
+#footer-right {
+  width: 500px;
+  text-align: right;
+  align-self: flex-end;
+}
+
+#footer-desc-title {
+  color: var(--grey-4);
+  font-family: var(--title-font);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+#footer-desc {
+  color: var(--grey-2);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: initial;
+  margin-bottom: 25px;
+}
+
+#footer-links {
+  display: flex;
+  gap: max(20%, 20px);
+  justify-content: flex-end;
+}
+
+#footer-links a {
+  transition: 0.2s;
+}
+
+#footer-links a:hover {
+  transform: scale(1.1);
+}
+
+#footer-links a i {
+  color: var(--grey-3);
+  font-size: 1.5rem;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+
+
+}
+
+#footer-details {
+  width: 100%;
+  font-family: var(--title-font);
+  margin: 50px 20px -50px 20px;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  letter-spacing: 3px;
+
+  a {
+    color: var(--blue-4);
+    text-decoration: none;
+    font-family: var(--text-font);
+    letter-spacing: initial;
+    text-transform: initial;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}

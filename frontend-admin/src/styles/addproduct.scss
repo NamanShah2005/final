@@ -1,0 +1,237 @@
+.home {
+    background: linear-gradient(45deg, #000000aa, #000000aa), url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Landscape_mountain.jpg/1024px-Landscape_mountain.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.her {
+    width: 300px;
+    background: #f9fafb;
+
+    .btn1, .btn2 {
+        background: linear-gradient(85deg, #192B68, #5E7CE9);
+        border-radius: 10px;
+        color: #202424 !important;
+        box-shadow: 0 0 20px #00000033;
+        transition: 0.2s;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        h3 {
+            color: #f9fafb;
+            font-family: var(--text-font);
+            font-weight: 500;
+        }
+    }
+}
+
+
+.nn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    font-family: var(--text-font);
+    background: #f9fafb;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000000aa;
+}
+
+.jkl {
+    display: flex;
+    flex-direction: column;
+    // border: 2px solid red;
+    height: 90%;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // align-items: flex-start;
+}
+
+.ptitle {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    // border: 2px solid green;
+}
+
+.ptitle1 {
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #192B68;
+}
+
+.ptitle2, .pimg2 {
+    width: 100%;
+    padding: 10px 15px !important;
+    font-size: 0.9rem;
+    font-family: var(--text-font);
+    font-weight: 500;
+    border: 2px solid #C7D0F8 !important;
+    outline: none;
+    border-radius: 10px !important;
+    box-shadow: 0 0 20px #00000022;
+    transition: 0.2s;
+
+    &:focus {
+        transform: scale(1.01);
+    }
+}
+
+#category {
+    padding: 10px 15px !important;
+    font-size: 0.9rem;
+    font-family: var(--text-font);
+    font-weight: 500;
+    border: 2px solid #C7D0F8 !important;
+    outline: none;
+    border-radius: 10px !important;
+    box-shadow: 0 0 20px #00000022;
+    transition: 0.2s;
+
+    &:focus {
+        transform: scale(1.05);
+    }
+}
+
+.ps2 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: 20px;
+}
+
+.pprice {
+    display: flex;
+    flex-direction: column;
+    // width: 90%;
+    // border: 2px solid red;
+    width: 50%;
+}
+
+.pprice2 {
+    padding: 12px 7px;
+    border-radius: 5px;
+    border: 1px solid black;
+    // font-size: 1.1rem;
+    outline: none;
+}
+
+.offerprice {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    // width: 90%;
+    // border: 2px solid red;
+    width: 50%;
+}
+
+.offerprice2 {
+    padding: 12px 7px;
+    border-radius: 5px;
+    border: 1px solid black;
+    // font-size: 1.1rem;
+    outline: none;
+}
+
+.productcategory {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.selection {
+    padding: 12px 9px;
+    border-radius: 5px;
+}
+
+.pimg {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 90%;
+}
+
+.pimg2 {
+    padding: 12px 5px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+}
+
+.newbtn{
+    margin-top: 50px;
+    margin-left: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 130px;
+    height: 40px;
+    margin-bottom: 50px;
+}
+
+.newbtn1{
+    margin-top: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    // height: 40px;
+    margin-left: 20px;
+    background: linear-gradient(45deg, #192B68, #5E7CE9);
+    font-weight: 500;
+    font-size: 1rem;
+    color: #f9fafb;
+    width: 130px;
+    box-shadow: 0 0 10px #00000055;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media screen and (max-width : 930px) {
+    .nn {
+        margin: 50px 0px;
+        // height: max-content;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width : 380px) {
+    .ps2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pprice{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    }
+
+    .pprice2 {
+        width: 100%;
+    padding: 10px 5px;
+    border: 1px solid black;
+    // font-size: 1.1rem;
+    outline: none;
+    border-radius: 5px;
+    }
+
+    .offerprice{ 
+    margin-top: 30px;
+        width: 90%;
+        margin-left: 0px;
+    }
+}
